@@ -7,25 +7,27 @@ import { AppLoading } from 'expo';
 import MealsNavigator from './navigation/MealsNavigator';
 
 const fetchFonts = () => {
-  return Font.loadAsync({
+  return Font.loadAsync ({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
-  })
-}
+  });
+};
 
 export default function App() {
-  const [ fontLoaded, setFontLoaded ] = useState(false);
+  const [ dataLoaded, setDataLoaded ] = useState(false);
 
-  if (!fontLoaded) {
-    return <AppLoading 
-    startAsync={fetchFonts} 
-    onFinish={() => setFontLoaded(true)}
-    />;
+  if (!dataLoaded) {
+    return (
+      <AppLoading 
+        startAsync={fetchFonts} 
+        onFinish={() => setDataLoaded(true)}
+        onError={(err) => console.log(err)}
+      />
+    );
   }
 
-  return (
-    <MealsNavigator />
-  );
+  return  <MealsNavigator />;
+  
 }
 
 const styles = StyleSheet.create({
