@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/stack": "^6.1.1",
     "expo": "~44.0.0",
     "expo-app-loading": "~1.3.0",
     "expo-font": "~10.0.4",
