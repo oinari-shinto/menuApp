@@ -5,6 +5,7 @@ const MealDetailScreen = () => {
   return (
     <View style={styles.screen}>
         <Text>The Meal Detail Screen</Text>
+        
     </View>
   )
 }
