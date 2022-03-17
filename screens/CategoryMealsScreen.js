@@ -18,8 +18,12 @@ const CategoryMealsScreen = (props) => {
           props.navigation.goBack();
         }}/>
     </View>
-  )
-}
+  );
+};
+
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+  console.log(navigationData);
+};
 
 const styles = StyleSheet.create({
     screen: {
