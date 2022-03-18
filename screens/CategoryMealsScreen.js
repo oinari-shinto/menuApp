@@ -22,7 +22,13 @@ const CategoryMealsScreen = (props) => {
 };
 
 CategoryMealsScreen.navigationOptions = (navigationData) => {
-  console.log(navigationData);
+  const catid = navigationData.navigation.getParam('catehoryId');
+
+  const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
+
+  return {
+    headerTitle: selectedCategory.title
+  };
 };
 
 const styles = StyleSheet.create({
