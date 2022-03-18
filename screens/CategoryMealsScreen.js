@@ -22,7 +22,7 @@ const CategoryMealsScreen = (props) => {
 };
 
 CategoryMealsScreen.navigationOptions = (navigationData) => {
-  const catid = navigationData.navigation.getParam('catehoryId');
+  const catId = navigationData.navigation.getParam('catehoryId');
 
   const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
 
