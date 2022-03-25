@@ -3,10 +3,13 @@ import { View, Text, StyleSheet, FlatList, Platform } from 'react-native';
 
 import { CATEGORIES, MEALS } from '../data/dummy-data';
 import Colors from '../constants/Colors';
+import MealItem from '../components/MealItem';
 
 const CategoryMealsScreen = (props) => {
   const renderMealsItem = itemData => {
-    return(<View><Text>{itemData.item.title}</Text></View>);
+    return(
+      <MealItem />
+    );
   };
   const catId = props.navigation.getParam('categoryId');
 
