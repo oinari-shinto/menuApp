@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import MealsNavigator from './navigation/MealsNavigator';
 import { enableScreens } from 'react-native-screens';
+import ShrinesNavigator from './navigation/ShrinesNavigator';
 
 enableScreens();
 /* const fetchFonts = () => {
@@ -35,7 +36,7 @@ export default function App() {
     );
   };
   /* <MealsNavigator /> */
-  return <MealsNavigator />
+  return <ShrinesNavigator />
 
   
   
