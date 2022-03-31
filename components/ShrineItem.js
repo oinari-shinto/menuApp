@@ -38,7 +38,9 @@ const styles = StyleSheet.create({
   shrineItem: {
     height: 200,
     width: '100%',
-    backgroundColor: '#ccc'
+    backgroundColor: '#f5f5f5',
+    borderRadius: 10,
+    overflow: 'hidden'
   },
   bgImage: {
     width: '100%',
@@ -46,11 +48,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   shrineHeader: {
-    height: '90%'
+    height: '85%'
   },
   shrineDetail: {
     paddingHorizontal: 10,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: '15%'
   },
   shrineDetail: {
     paddingHorizontal: 10,
