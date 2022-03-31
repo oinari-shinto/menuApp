@@ -1,5 +1,6 @@
 import Category from "../models/category";
 import Meal from '../models/meal';
+import Shrine from '../models/shrine';
 
 export const CATEGORIES = [
     new Category('c1', 'Italian', '#f5428d'),
@@ -15,13 +16,13 @@ export const CATEGORIES = [
   ];
 
   export const MEALS = [
-    new Meal(
+    new Shrine(
       'm1',
       ['c1', 'c2'],
       'Spaghetti with Tomato Sauce',
       'affordable',
       'simple',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+      'https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D1%81%D0%B8%D0%BC%D0%B8-%D0%98%D0%BD%D0%B0%D1%80%D0%B8-%D1%82%D0%B0%D0%B9%D1%81%D1%8F#/media/%D0%A4%D0%B0%D0%B9%D0%BB:KyotoFushimiInariLarge.jpg',
       20,
       [
         '4 Tomatoes',
