@@ -1,18 +1,27 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native'
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ImageBackground
+} from 'react-native'
 
 const ShrineItem = props => {
   return (
     <View style={styles.shrineItem}>
       <TouchableOpacity onPress={props.onSelect}>
         <View>
-          <View style={{...styles.shrineRow, ...styles.shrineHeader}}>
-            <ImageBackground source={{url: props.image}} style={bgImage}>
-              <Text style={styles.title} numberOfLines={1}>{props.title}</Text>
+          <View style={{ ...styles.shrineRow, ...styles.shrineHeader }}>
+            <ImageBackground source={{ url: props.image }} style={bgImage}>
+              <View style={styles.titleContainer}>
+                <Text style={styles.title} numberOfLines={1}>
+                  {props.title}
+                </Text>
+              </View>
             </ImageBackground>
-            
           </View>
-          <View style={{...styles.shrineRow, ...styles.shrineDetail}}>
+          <View style={{ ...styles.shrineRow, ...styles.shrineDetail }}>
             <Text>{props.duration}m</Text>
             <Text>{props.complexity.toUpperCase()}</Text>
             <Text>{props.affordability.toUpperCase()}</Text>
@@ -20,16 +29,16 @@ const ShrineItem = props => {
         </View>
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 const styles = StyleSheet.create({
   shrineRow: {
     flexDirection: 'row'
   },
   shrineItem: {
-      height: 200,
-      width: '100%',
-      backgroundColor: '#ccc'
+    height: 200,
+    width: '100%',
+    backgroundColor: '#ccc'
   },
   bgImage: {
     width: '100%',
@@ -37,8 +46,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   shrineHeader: {
-    height: '90%',
-
+    height: '90%'
   },
   shrineDetail: {
     paddingHorizontal: 10,
@@ -47,17 +55,19 @@ const styles = StyleSheet.create({
   shrineDetail: {
     paddingHorizontal: 10,
     justifyContent: 'space-between'
+  },
+  titleContainer: {
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    paddingVertical: 5,
+    paddingHorizontal: 12
   },
   title: {
     fontFamily: 'open-sans-bold',
     fontSize: 20,
     color: 'white',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    paddingVertical: 5,
-    paddingHorizontal: 12,
+
     textAlign: 'center'
   }
-
 })
 
 export default ShrineItem
