@@ -15,11 +15,11 @@ export const CATEGORIES = [
     new Category('c10', 'Summer', '#47fced')
   ];
 
-  export const MEALS = [
-    new Shrine(
+  export const SHRINES = [
+    new Shrine (
       'm1',
       ['c1', 'c2'],
-      'Spaghetti with Tomato Sauce',
+      'Kyoto Fushimi Inari',
       'affordable',
       'simple',
       'https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D1%81%D0%B8%D0%BC%D0%B8-%D0%98%D0%BD%D0%B0%D1%80%D0%B8-%D1%82%D0%B0%D0%B9%D1%81%D1%8F#/media/%D0%A4%D0%B0%D0%B9%D0%BB:KyotoFushimiInariLarge.jpg',
@@ -47,7 +47,7 @@ export const CATEGORIES = [
       true
     ),
   
-    new Meal(
+    new Shrine(
       'm2',
       ['c2'],
       'Toast Hawaii',
@@ -73,7 +73,7 @@ export const CATEGORIES = [
       false
     ),
   
-    new Meal(
+    new Shrine(
       'm3',
       ['c3'],
       'Classic Hamburger',
@@ -102,7 +102,7 @@ export const CATEGORIES = [
       true
     ),
   
-    new Meal(
+    new Shrine(
       'm4',
       ['c4'],
       'Wiener Schnitzel',
@@ -135,7 +135,7 @@ export const CATEGORIES = [
       false
     ),
   
-    new Meal(
+    new Shrine(
       'm5',
       ['c2', 'c5', 'c10'],
       'Salad with Smoked Salmon',
@@ -167,7 +167,7 @@ export const CATEGORIES = [
       true
     ),
   
-    new Meal(
+    new Shrine(
       'm6',
       ['c6', 'c10'],
       'Delicious Orange Mousse',
@@ -200,7 +200,7 @@ export const CATEGORIES = [
       false
     ),
   
-    new Meal(
+    new Shrine(
       'm7',
       ['c7'],
       'Pancakes',
@@ -229,7 +229,7 @@ export const CATEGORIES = [
       false
     ),
   
-    new Meal(
+    new Shrine(
       'm8',
       ['c8'],
       'Creamy Indian Chicken Curry',
@@ -260,7 +260,7 @@ export const CATEGORIES = [
       true
     ),
   
-    new Meal(
+    new Shrine(
       'm9',
       ['c9'],
       'Chocolate Souffle',
@@ -306,7 +306,7 @@ export const CATEGORIES = [
       true,
       false
     ),
-    new Meal(
+    new Shrine(
       'm10',
       ['c2', 'c5', 'c10'],
       'Asparagus Salad with Cherry Tomatoes',
