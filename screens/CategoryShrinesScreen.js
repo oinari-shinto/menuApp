@@ -13,7 +13,11 @@ const CategoryShrinesScreen = props => {
     duration={itemData.item.duration} 
     complexity={itemData.item.complexity}
     affordability={itemData.item.affordability}
-    onSelect={() => {}} />
+    onSelect={() => {
+      props.navigation.navigate({routeName: 'ShrineDetail', params: {
+        shrineId: itemData.item.id
+      }})
+    }} />
   }
   const catId = props.navigation.getParam('categoryId')
 
