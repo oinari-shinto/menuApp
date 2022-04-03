@@ -1,5 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderButton';
 import { SHRINES } from '../data/dummy-data';
 
 const ShrineDetailScreen = () => {
@@ -20,7 +22,12 @@ ShrineDetailScreen.navigationOptions = (navigatorData) => {
   const selectedShrine = SHRINES.find(shrine => shrine.id === shrineId)
 
   return {
-    headerTitle: selectedShrine.title;
+    headerTitle: selectedShrine.title,
+    headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton}>
+      <Item title='Favorite' iconName='ios-star' onPress={() => {
+        console.log('Mark as facorite');
+      }} />
+    </HeaderButtons>
   };
 }
 
