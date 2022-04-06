@@ -33,6 +33,8 @@ const ShrinesNavigator = createStackNavigator(
 const ShrinesFavTabNavigator = createBottomTabNavigator({
     Shrines: ShrinesNavigator,
     Favorites: FavoritesScreen
+}, {
+   
 });
 
 export default createAppContainer(ShrinesFavTabNavigator)
