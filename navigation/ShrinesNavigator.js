@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack'
-import { createAppContainer } from 'react-navigation'
+/* import { createAppContainer } from 'react-navigation' */
+import { createAppContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import CategoriesScreen from '../screens/CategoriesScreen';
@@ -34,7 +35,7 @@ const ShrinesFavTabNavigator = createBottomTabNavigator({
     Shrines: ShrinesNavigator,
     Favorites: FavoritesScreen
 }, {
-   
+  options={{}}
 });
 
 export default createAppContainer(ShrinesFavTabNavigator)
