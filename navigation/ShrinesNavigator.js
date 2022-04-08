@@ -35,7 +35,10 @@ const ShrinesFavTabNavigator = createBottomTabNavigator({
     Shrines: ShrinesNavigator,
     Favorites: FavoritesScreen
 }, {
-  options={{}}
+  tabBarOptions: {
+    activeTintColor: '#F57C00',
+    
+  },
 });
 
 export default createAppContainer(ShrinesFavTabNavigator)
