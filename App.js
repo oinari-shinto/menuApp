@@ -9,6 +9,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import MealsNavigator from './navigation/MealsNavigator';
 import { enableScreens } from 'react-native-screens';
 import ShrinesNavigator from './navigation/ShrinesNavigator';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Colors from './constants/Colors';
 
 enableScreens();
 /* const fetchFonts = () => {
@@ -23,6 +25,9 @@ const fetchFonts = () => {
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
   });
 };
+
+const Tab = createBottomTabNavigator();
+
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
 
@@ -36,7 +41,18 @@ export default function App() {
     );
   };
   /* <MealsNavigator /> */
-  return <ShrinesNavigator />
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: Colors.accentColor
+      }
+      }
+    >
+      <ShrinesNavigator />
+
+    </Tab.Navigator>
+    
+  );
 
   
   

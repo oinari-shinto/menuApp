@@ -1,7 +1,10 @@
+import * as React from 'react';
 import { createStackNavigator } from 'react-navigation-stack'
 /* import { createAppContainer } from 'react-navigation' */
 import { createAppContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+/* import { createBottomTabNavigator } from '@react-navigation/bottom-tabs' */
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import CategoriesScreen from '../screens/CategoriesScreen';
 import CategoryShrines from '../screens/CategoryShrinesScreen';
@@ -34,11 +37,6 @@ const ShrinesNavigator = createStackNavigator(
 const ShrinesFavTabNavigator = createBottomTabNavigator({
     Shrines: ShrinesNavigator,
     Favorites: FavoritesScreen
-}, {
-  tabBarOptions: {
-    activeTintColor: '#F57C00',
-    
-  },
 });
 
 export default createAppContainer(ShrinesFavTabNavigator)
