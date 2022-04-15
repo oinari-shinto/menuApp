@@ -1,15 +1,16 @@
-import * as React from 'react';
+import * as React from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
 /* import { createAppContainer } from 'react-navigation' */
-import { createAppContainer } from '@react-navigation/native';
+import { createAppContainer } from '@react-navigation/native'
 /* import { createBottomTabNavigator } from '@react-navigation/bottom-tabs' */
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { Ionicons } from '@expo/vector-icons';
 
-import CategoriesScreen from '../screens/CategoriesScreen';
-import CategoryShrines from '../screens/CategoryShrinesScreen';
-import ShrineDetailScreen from '../screens/ShrineDetailScreen';
-import FavoritesScreen from '../screens/FavoritesScreen';
+import CategoriesScreen from '../screens/CategoriesScreen'
+import CategoryShrines from '../screens/CategoryShrinesScreen'
+import ShrineDetailScreen from '../screens/ShrineDetailScreen'
+import FavoritesScreen from '../screens/FavoritesScreen'
 
 const ShrinesNavigator = createStackNavigator(
   {
@@ -35,8 +36,12 @@ const ShrinesNavigator = createStackNavigator(
 )
 
 const ShrinesFavTabNavigator = createBottomTabNavigator({
-    Shrines: ShrinesNavigator,
-    Favorites: FavoritesScreen
-});
+  Shrines: { screen: ShrinesNavigator, navigationOptions: {
+    toolbarIcon: (tabInfo) => {
+      return
+    }
+  } },
+  Favorites: FavoritesScreen
+})
 
 export default createAppContainer(ShrinesFavTabNavigator)
