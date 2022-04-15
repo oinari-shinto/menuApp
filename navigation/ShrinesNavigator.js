@@ -38,7 +38,7 @@ const ShrinesNavigator = createStackNavigator(
 const ShrinesFavTabNavigator = createBottomTabNavigator({
   Shrines: { screen: ShrinesNavigator, navigationOptions: {
     toolbarIcon: (tabInfo) => {
-      return
+      return <Ionicons />
     }
   } },
   Favorites: FavoritesScreen
