@@ -38,10 +38,14 @@ const ShrinesNavigator = createStackNavigator(
 const ShrinesFavTabNavigator = createBottomTabNavigator({
   Shrines: { screen: ShrinesNavigator, navigationOptions: {
     toolbarIcon: (tabInfo) => {
-      return <Ionicons />
+      return <Ionicons name='user-ninja' size={25} color={tabInfo.tintColor}/>
     }
   } },
-  Favorites: FavoritesScreen
+  Favorites: { screen: FavoritesScreen, navigationOptions: {
+    toolbarIcon: (tabInfo) => {
+      return <Ionicons name='user-star' size={25} color={tabInfo.tintColor}/>
+    }
+  } },
 })
 
 export default createAppContainer(ShrinesFavTabNavigator)
