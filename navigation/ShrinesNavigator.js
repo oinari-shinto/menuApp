@@ -6,11 +6,14 @@ import { createAppContainer } from '@react-navigation/native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { Ionicons } from '@expo/vector-icons';
+import {Platform} from 'react-native';
 
 import CategoriesScreen from '../screens/CategoriesScreen'
 import CategoryShrines from '../screens/CategoryShrinesScreen'
 import ShrineDetailScreen from '../screens/ShrineDetailScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
+import { createMaterialBottomTabs } from 'react-navigation-material-bottom-tabs'
+
 
 const ShrinesNavigator = createStackNavigator(
   {
