@@ -36,9 +36,9 @@ const ShrinesNavigator = createStackNavigator(
       headerTintColor: Platform.OS === 'android' ? 'white' : Color.primaryColor
     }
   }
-)
+);
 
-const ShrinesFavTabNavigator = createBottomTabNavigator({
+const tabScreenConfig = {
   Shrines: { screen: ShrinesNavigator, navigationOptions: {
     toolbarIcon: (tabInfo) => {
       return <Ionicons name='user-ninja' size={25} color={tabInfo.tintColor}/>
@@ -49,6 +49,10 @@ const ShrinesFavTabNavigator = createBottomTabNavigator({
       return <Ionicons name='user-star' size={25} color={tabInfo.tintColor}/>
     }
   } },
-})
+}
+
+const ShrinesFavTabNavigator = Platform.OS = 'android' 
+? createMaterialBottomTabs(tabScreenConfig) 
+: createBottomTabNavigator(tabScreenConfig)
 
 export default createAppContainer(ShrinesFavTabNavigator)
