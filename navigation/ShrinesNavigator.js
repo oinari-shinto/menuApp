@@ -52,7 +52,10 @@ const tabScreenConfig = {
 }
 
 const ShrinesFavTabNavigator = Platform.OS = 'android' 
-? createMaterialBottomTabs(tabScreenConfig) 
+? createMaterialBottomTabs(tabScreenConfig, {
+ 
+  
+}) 
 : createBottomTabNavigator(tabScreenConfig)
 
 export default createAppContainer(ShrinesFavTabNavigator)
