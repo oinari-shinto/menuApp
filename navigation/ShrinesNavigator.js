@@ -14,6 +14,14 @@ import ShrineDetailScreen from '../screens/ShrineDetailScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
 import { createMaterialBottomTabs } from 'react-navigation-material-bottom-tabs'
 
+const defaultStackNavOption = {
+  headerStyle: {
+    backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
+  },
+  headerTintColor: Platform.OS === 'android' ? 'white' : Color.primaryColor,
+  headerTitle: 'A Screen'
+}
+
 
 const ShrinesNavigator = createStackNavigator(
   {
@@ -29,14 +37,15 @@ const ShrinesNavigator = createStackNavigator(
     ShrineDetail: ShrineDetailScreen
   },
   {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
-      },
-      headerTintColor: Platform.OS === 'android' ? 'white' : Color.primaryColor
-    }
-  }
+    defaultNavigationOptions: defaultStackNavOption }
 );
+
+const FavNavigator = createStackNavigator({
+  Favorites: FavoritesScreen,
+  ShrineDetail: ShrineDetailScreen
+}, {
+  defaultNavigationOptions: defaultStackNavOption
+})
 
 const tabScreenConfig = {
   Shrines: { screen: ShrinesNavigator, navigationOptions: {
