@@ -9,6 +9,10 @@ const FavoritesScreen = () => {
   )
 }
 
+FavoritesScreen.navigationOption = {
+  headerTitle: 'Shrine Favorites'
+};
+
 const styles = StyleSheet.create({
     screen: {
         flex: 1,

@@ -41,7 +41,7 @@ const ShrinesNavigator = createStackNavigator(
 );
 
 const FavNavigator = createStackNavigator({
-  Favorites: FavoritesScreen,
+  Favorites: FavNavigator,
   ShrineDetail: ShrineDetailScreen
 }, {
   defaultNavigationOptions: defaultStackNavOption
