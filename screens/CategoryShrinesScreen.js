@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, FlatList, Platform } from 'react-native'
+import { Platform } from 'react-native'
 
 import { CATEGORIES, SHRINES } from '../data/dummy-data'
 import Colors from '../constants/Colors'
@@ -26,14 +26,7 @@ const CategoryShrinesScreen = props => {
   )
   /* const selectedCategory = CATEGORIES.find(cat => cat.id === catId); */
   return (
-    <View style={styles.screen}>
-      <FlatList
-        data={displayedMeals}
-        keyExtractor={(item, index) => item.id}
-        renderItem={renderShrinesItem}
-        style={{width: '100%'}}
-      />
-    </View>
+    
   )
 }
 
@@ -51,12 +44,6 @@ CategoryShrinesScreen.navigationOptions = navigationData => {
   }
 }
 
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
+
 
 export default CategoryShrinesScreen
