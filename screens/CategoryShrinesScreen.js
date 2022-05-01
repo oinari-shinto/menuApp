@@ -3,22 +3,9 @@ import { Platform } from 'react-native'
 
 import { CATEGORIES, SHRINES } from '../data/dummy-data'
 import Colors from '../constants/Colors'
-import ShrineItem from '../components/ShrineItem'
 
 const CategoryShrinesScreen = props => {
-  const renderShrinesItem = itemData => {
-    return <ShrineItem 
-    title={itemData.item.title}
-    image={itemData.item.imageUrl}
-    duration={itemData.item.duration} 
-    complexity={itemData.item.complexity}
-    affordability={itemData.item.affordability}
-    onSelect={() => {
-      props.navigation.navigate({routeName: 'ShrineDetail', params: {
-        shrineId: itemData.item.id
-      }})
-    }} />
-  }
+  
   const catId = props.navigation.getParam('categoryId')
 
   const displayedShrines = SHRINES.find(
