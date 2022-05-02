@@ -1,8 +1,9 @@
-import React from 'react'
-import { Platform } from 'react-native'
+import React from 'react';
+import { Platform } from 'react-native';
 
-import { CATEGORIES, SHRINES } from '../data/dummy-data'
-import Colors from '../constants/Colors'
+import { CATEGORIES, SHRINES } from '../data/dummy-data';
+import Colors from '../constants/Colors';
+import ShrineList from '../components/ShrineList';
 
 const CategoryShrinesScreen = props => {
   
@@ -13,7 +14,7 @@ const CategoryShrinesScreen = props => {
   )
   /* const selectedCategory = CATEGORIES.find(cat => cat.id === catId); */
   return (
-    
+    <ShrineList listData={displayedShrines} navigation={props.navigation}/>
   )
 }
 

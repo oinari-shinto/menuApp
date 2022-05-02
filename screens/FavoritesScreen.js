@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import ShrineList from '../components/ShrineList';
+import SHRINES from '../data/dummy-data';
 
-const FavoritesScreen = () => {
+const FavoritesScreen = (props) => {
+  favShrines = SHRINES.filter(Shrine => Shrine.id === 'm1' || Shrine.id === 'm2')
   return (
-    <View style={styles.screen}>
-        <Text>The Favorites Screen</Text>
-    </View>
+    <ShrineList listData={favShrines} navigation = {props.navigation}/>
   )
 }
 
@@ -13,12 +13,6 @@ FavoritesScreen.navigationOption = {
   headerTitle: 'Shrine Favorites'
 };
 
-const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-}); 
+
 
 export default FavoritesScreen
